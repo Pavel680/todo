@@ -1,0 +1,28 @@
+input:checked + span {
+    text-decoration: line-through;
+    }	
+.box {
+	margin-top:3%;
+	margin-left:25%;
+}
+form {
+	margin-top:1%;
+	display:flex;
+	width:256px;
+	position:relative;
+}
+.deleteButton {
+	width:25px;
+	height:20px;
+	margin-left:1%;
+	position:absolute;
+	top:0;
+	right:0;
+}
+.deleteButton:hover {background-color:Salmon;}
+span{
+	word-break:break-all;
+}
+button:hover{
+	background-color:CornflowerBlue;
+}
