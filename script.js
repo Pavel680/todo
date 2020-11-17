@@ -22,25 +22,25 @@ window.onload = function () {
 	newTaskField.appendChild(deleteButton);
   }
 input.onkeyup = function (e) {
-		if( e.keyCode === 13 ) {
-			if ( input.value == input.value.replace( /[^\s]/g, '' ) ) {
-			input.value = '';
-			return null;
-			}
-		CreateNewTask( input.value );
-		input.value = '';
-		} else {
-		return false;
-		}
+	if( e.keyCode === 13 ) {
+	if ( input.value == input.value.replace( /[^\s]/g, '' ) ) {
+	input.value = '';
+	return null;
+	}
+	CreateNewTask( input.value );
+	input.value = '';
+	} else {
+	return false;
+	}
 	}
 btn.onclick = function () {
-		if ( input.value == input.value.replace( /[^\s]/g, '' ) ) {
-		input.value = '';
-		return null;	
-		} else {
-		CreateNewTask( input.value );
-		input.value = '';
-		}
+	if ( input.value == input.value.replace( /[^\s]/g, '' ) ) {
+	input.value = '';
+	return null;	
+	} else {
+	CreateNewTask( input.value );
+	input.value = '';
+	}
 	}
 
 	
