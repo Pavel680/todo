@@ -4,6 +4,7 @@ input:checked + span {
 .box {
 	margin-top:3%;
 	margin-left:25%;
+	font-size:large;
 }
 form {
 	margin-top:1%;
