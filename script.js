@@ -20,7 +20,7 @@ window.onload = function () {
 	newTaskField.appendChild(checkbox);
 	newTaskField.appendChild(newTask);
 	newTaskField.appendChild(deleteButton);
-  }
+	}
 input.onkeyup = function (e) {
 	if( e.keyCode === 13 ) {
 	if ( input.value == input.value.replace( /[^\s]/g, '' ) ) {
