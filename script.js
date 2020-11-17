@@ -21,7 +21,7 @@ window.onload = function () {
 	newTaskField.appendChild(newTask);
 	newTaskField.appendChild(deleteButton);
   }
-	input.onkeyup = function (e) {
+input.onkeyup = function (e) {
 		if( e.keyCode === 13 ) {
 			if ( input.value == input.value.replace( /[^\s]/g, '' ) ) {
 			input.value = '';
@@ -33,7 +33,7 @@ window.onload = function () {
 		return false;
 		}
 	}
-	btn.onclick = function () {
+btn.onclick = function () {
 		if ( input.value == input.value.replace( /[^\s]/g, '' ) ) {
 		input.value = '';
 		return null;	
