@@ -5,33 +5,31 @@ window.onload = function () {
   function CreateNewTask(text) {
 	let newTaskField = document.createElement('form');
 	let newTask = document.createElement('span');
-	newTask.textContent = text;
-	newTask.setAttribute('contenteditable', 'true');
-	out.appendChild(newTaskField);
+		newTask.textContent = text;
+		newTask.setAttribute('contenteditable', 'true');
+		out.appendChild(newTaskField);
     let deleteButton = document.createElement('button');
-    deleteButton.textContent = 'X';
-	deleteButton.className = 'deleteButton';
-    let checkbox = document.createElement('input');
-    checkbox.setAttribute('type', 'checkbox', 'value', 'text');
-	checkbox.className = 'inputCheckbox';
-	newTaskField.appendChild(checkbox);
-	newTaskField.appendChild(newTask);
-    deleteButton.onclick = function () {
+		deleteButton.textContent = 'X';
+		deleteButton.className = 'deleteButton';
+		deleteButton.onclick = function () {
 		out.removeChild(newTaskField);
     }
-    newTaskField.appendChild(deleteButton);
+    let checkbox = document.createElement('input');
+		checkbox.setAttribute('type', 'checkbox', 'value', 'text');
+		checkbox.className = 'inputCheckbox';
+	newTaskField.appendChild(checkbox);
+	newTaskField.appendChild(newTask);
+	newTaskField.appendChild(deleteButton);
   }
 	input.onkeyup = function (e) {
 		if( e.keyCode === 13 ) {
-		
 			if ( input.value == input.value.replace( /[^\s]/g, '' ) ) {
 				input.value = '';
 				return null;
 			}
-			
-			CreateNewTask( input.value );
-			input.value = '';
-			} else {
+				CreateNewTask( input.value );
+				input.value = '';
+		} else {
 			return false;
 		}
 	}
@@ -44,7 +42,7 @@ window.onload = function () {
 		} else {
 			CreateNewTask( input.value );
 			input.value = '';
-		  }
+		}
 	}
 
 	
