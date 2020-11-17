@@ -3,7 +3,6 @@ window.onload = function () {
 	let out = document.getElementById('out');
 	let btn = document.getElementById('add');
   function CreateNewTask(text) {
-	  
 	let newTaskField = document.createElement('form');
 	let newTask = document.createElement('span');
 	newTask.textContent = text;
@@ -18,26 +17,22 @@ window.onload = function () {
 	newTaskField.appendChild(checkbox);
 	newTaskField.appendChild(newTask);
     deleteButton.onclick = function () {
-		
 		out.removeChild(newTaskField);
     }
     newTaskField.appendChild(deleteButton);
   }
 	input.onkeyup = function (e) {
-		
 		if( e.keyCode === 13 ) {
 		
 			if ( input.value == input.value.replace( /[^\s]/g, '' ) ) {
-				
 				input.value = '';
 				return null;
 			}
 			
-		CreateNewTask( input.value );
-		input.value = '';
-		} else {
-			
-		return false;
+			CreateNewTask( input.value );
+			input.value = '';
+			} else {
+			return false;
 		}
 	}
 	btn.onclick = function () {
@@ -47,10 +42,9 @@ window.onload = function () {
 			return null;	
 			
 		} else {
-			
-    CreateNewTask( input.value );
-	input.value = '';
-		}
+			CreateNewTask( input.value );
+			input.value = '';
+		  }
 	}
 
 	
