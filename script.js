@@ -8,13 +8,13 @@ window.onload = function () {
 	newTask.textContent = text;
 	newTask.setAttribute('contenteditable', 'true');
 	out.appendChild(newTaskField);
-let deleteButton = document.createElement('button');
+	let deleteButton = document.createElement('button');
 	deleteButton.textContent = 'X';
 	deleteButton.className = 'deleteButton';
 	deleteButton.onclick = function () {
 	out.removeChild(newTaskField);
     }
-let checkbox = document.createElement('input');
+	let checkbox = document.createElement('input');
 	checkbox.setAttribute('type', 'checkbox', 'value', 'text');
 	checkbox.className = 'inputCheckbox';
 	newTaskField.appendChild(checkbox);
