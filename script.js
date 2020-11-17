@@ -6,47 +6,47 @@ window.onload = function () {
 	let newTaskField = document.createElement('form');
 	let newTask = document.createElement('span');
 	newTask.textContent = text;
-	newTask.setAttribute('contenteditable','true')
+	newTask.setAttribute('contenteditable', 'true');
 	out.appendChild(newTaskField);
-	newTask.onclick=function (){
-	newTask.setAttribute('contenteditable','true');
-	}
     let deleteButton = document.createElement('button');
     deleteButton.textContent = 'X';
-	deleteButton.className='deleteButton';
+	deleteButton.className = 'deleteButton';
     let checkbox = document.createElement('input');
-    checkbox.setAttribute('type', 'checkbox', 'value','text');
-	checkbox.className='inputCheckbox';
+    checkbox.setAttribute('type', 'checkbox', 'value', 'text');
+	checkbox.className = 'inputCheckbox';
 	newTaskField.appendChild(checkbox);
 	newTaskField.appendChild(newTask);
     deleteButton.onclick = function () {
-     out.removeChild(newTaskField);
+    out.removeChild(newTaskField);
     };
     newTaskField.appendChild(deleteButton);
-  }
-	input.onkeyup=function (e){
-	if(e.keyCode===13){
-	if (input.value ==input.value.replace(/[^\s]/g, '')) {
-	input.value = ''
-	return null;}	
-	CreateNewTask(input.value);
-	input.value=''
-	} else {
-	return false;
-	}
-	};
-  btn.onclick = function () {
-    if (input.value ==input.value.replace(/[^\s]/g, '')) {
-	input.value = ''
-	return null;	
-	} 
-	else {
-    CreateNewTask(input.value);
+  };
+	input.onkeyup = function (e) {
+		
+	if( e.keyCode === 13 ) {
+		
+	if ( input.value == input.value.replace( /[^\s]/g, '' ) ) {
 	input.value = '';
-	}
+	return null;
+	};
+	CreateNewTask( input.value );
+	input.value = '';
+	}; else {
+	return false;
+	};
+	};
+	btn.onclick = function () {
+    if ( input.value == input.value.replace( /[^\s]/g, '' ) ) {
+	input.value = '';
+	return null;	
+	}; 
+	else {
+    CreateNewTask( input.value );
+	input.value = '';
+	};
   };
 
 	
-}
+};
 	
 
