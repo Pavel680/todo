@@ -13,7 +13,7 @@ window.onload = function () {
 	deleteButton.className = 'deleteButton';
 	deleteButton.onclick = function () {
 	out.removeChild(newTaskField);
-    }
+	}
 	let checkbox = document.createElement('input');
 	checkbox.setAttribute('type', 'checkbox', 'value', 'text');
 	checkbox.className = 'inputCheckbox';
